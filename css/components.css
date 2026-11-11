@@ -1,0 +1,721 @@
+/* ==========================================================================
+   Components
+   Built from the components in the "Portfolio website 2.0" Figma file.
+   Uses tokens only. No raw colors, font sizes, or spacing in this file.
+   Breakpoints: 40rem (tablet) and 64rem (desktop), see tokens.css.
+   The .is-hover and .is-focus classes exist only so the design system page
+   can show those states side by side.
+   ========================================================================== */
+
+/* ---- Button -------------------------------------------------------------- */
+/* Figma: Button, type = primary | secondary, state = Default | Inverse */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--size-button-min-width);
+  padding: var(--space-20) var(--space-40);
+  border: var(--size-border) solid var(--color-blue-900);
+  border-radius: var(--radius-2);
+  background-color: var(--color-blue-900);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.button:hover,
+.button.is-hover {
+  border-color: var(--color-blue-700);
+  background-color: var(--color-blue-700);
+  color: var(--color-white);
+}
+
+.button:active {
+  transform: translateY(var(--size-border));
+}
+
+.button.is-focus {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.button--secondary {
+  border-color: var(--color-blue-700);
+  background-color: transparent;
+  color: var(--color-blue-700);
+}
+
+.button--secondary:hover,
+.button--secondary.is-hover {
+  border-color: var(--color-blue-700);
+  background-color: var(--color-blue-700);
+  color: var(--color-white);
+}
+
+.button--inverse {
+  border-color: var(--color-cream-200);
+  background-color: var(--color-cream-200);
+  color: var(--color-blue-900);
+}
+
+.button--inverse:hover,
+.button--inverse.is-hover {
+  border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-blue-900);
+}
+
+.button--inverse.is-focus {
+  outline-color: var(--color-focus-inverse);
+}
+
+.button--secondary.button--inverse {
+  border-color: var(--color-cream-50);
+  background-color: transparent;
+  color: var(--color-cream-50);
+}
+
+.button--secondary.button--inverse:hover,
+.button--secondary.button--inverse.is-hover {
+  border-color: var(--color-cream-50);
+  background-color: var(--color-cream-50);
+  color: var(--color-blue-900);
+}
+
+/* ---- Navigation ---------------------------------------------------------- */
+/* Figma: nav (logo + menu items) and header nav (nav with page padding) */
+
+.site-header {
+  padding: var(--space-40) var(--gutter);
+  background-color: var(--color-background-quiet);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  width: 100%;
+  max-width: var(--width-max);
+  margin-inline: auto;
+}
+
+.site-nav__logo {
+  display: block;
+  flex-shrink: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.site-nav__logo:hover {
+  opacity: 0.7;
+}
+
+.site-nav__logo img {
+  width: var(--size-logo-width);
+  height: var(--size-logo-height);
+}
+
+.site-nav__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-24);
+}
+
+.site-nav__link {
+  color: var(--color-blue-900);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 var(--size-border);
+  padding-block: var(--space-4);
+  transition:
+    background-size var(--duration-base) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.site-nav__link:hover,
+.site-nav__link.is-hover,
+.site-nav__link[aria-current="page"] {
+  color: var(--color-blue-700);
+  background-size: 100% var(--size-border);
+}
+
+/* ---- Footer navigation --------------------------------------------------- */
+/* Figma: footer nav */
+
+.site-footer {
+  padding: var(--space-48) var(--gutter);
+  background-color: var(--color-background-quiet);
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  width: 100%;
+  max-width: var(--width-max);
+  margin-inline: auto;
+}
+
+/* ---- Meta label ---------------------------------------------------------- */
+/* Figma: Website/Body/400, "Industry | Service | Userbase" */
+
+.meta {
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body-400);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body-400);
+  letter-spacing: var(--letter-spacing-body-400);
+  text-transform: capitalize;
+}
+
+/* ---- Divider ------------------------------------------------------------- */
+
+.divider {
+  width: 100%;
+  height: var(--size-border);
+  margin: 0;
+  border: 0;
+  background-color: var(--color-divider);
+}
+
+/* ---- Snippet ------------------------------------------------------------- */
+/* Figma: snippet */
+
+.snippet {
+  padding: var(--space-24) var(--space-28);
+  background-color: var(--color-callout);
+  color: var(--color-text);
+  font-size: var(--font-size-body-300);
+  line-height: var(--line-height-body-300);
+}
+
+.snippet__title {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Figures inside snippet text, shown in Blue / 900 */
+.snippet__em {
+  color: var(--color-heading);
+}
+
+.snippet-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+@media (min-width: 40rem) and (max-width: 63.99rem) {
+  .snippet-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---- Callout ------------------------------------------------------------- */
+/* Figma: usage guidelines panel in the color system frame */
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-24);
+  border-radius: var(--radius-12);
+  background-color: var(--color-callout);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body-200);
+  line-height: var(--line-height-body-200);
+}
+
+.callout__title {
+  color: var(--color-heading);
+  font-size: var(--font-size-heading-300);
+}
+
+/* ---- Goals list ---------------------------------------------------------- */
+/* Figma: goals panel inside the project component */
+
+.goals {
+  padding: var(--space-16);
+  background-color: var(--color-background-contrast);
+  color: var(--color-text);
+}
+
+.goals ul {
+  margin: 0;
+  padding-left: var(--width-list-indent);
+  list-style: disc;
+}
+
+/* ---- Image frames -------------------------------------------------------- */
+/* Figma: banner slot in company, mobile image and desktop image in project */
+
+.frame {
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.frame--banner {
+  border-radius: var(--radius-48) 0 var(--radius-48) 0;
+}
+
+.frame--banner img {
+  aspect-ratio: var(--ratio-company-banner);
+}
+
+.frame--mobile,
+.frame--desktop,
+.frame--shot {
+  border-radius: var(--radius-24) var(--radius-24) 0 0;
+}
+
+/* Screenshot of any height: keeps the image's own proportions */
+.frame--shot img {
+  height: auto;
+}
+
+/* Image that already carries its own rounded cards and shadows (Bixal research) */
+.frame--bare {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Larger top corners, used by the Snagajob screenshots (Figma 48 and 32) */
+.frame--shot-lg {
+  border-radius: var(--radius-48) var(--radius-48) 0 0;
+}
+
+.frame--phone {
+  border-radius: var(--radius-32) var(--radius-32) 0 0;
+}
+
+.frame--phone img {
+  aspect-ratio: auto;
+}
+
+.frame--mobile img {
+  aspect-ratio: var(--ratio-device-mobile);
+}
+
+.frame--desktop img {
+  aspect-ratio: var(--ratio-device-desktop);
+}
+
+/* Stacked banner: two framed screenshots overlapping inside one banner frame.
+   Figma: "snagajob banner" (bottom and top layers). Percentages are the
+   layer positions measured from the 880 x 575 design canvas. */
+
+.frame--stack {
+  position: relative;
+  aspect-ratio: var(--ratio-company-banner);
+  box-shadow: none; /* the layers carry their own shadows */
+}
+
+.frame__stack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: var(--ratio-stack-canvas);
+}
+
+.frame__layer {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-48) var(--radius-48) 0 0;
+  box-shadow: var(--shadow-2);
+}
+
+.frame__layer--back {
+  top: 0;
+  left: -0.06%;
+  width: 89.98%;
+  height: 65.03%;
+}
+
+.frame__layer--front {
+  top: 34.22%;
+  right: -0.05%;
+  width: 89.26%;
+  height: 65.18%;
+}
+
+.frame--stack img {
+  aspect-ratio: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* ---- Company card -------------------------------------------------------- */
+/* Figma: company (homepage "Past work" entry) */
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-24);
+  padding: var(--space-64) var(--gutter-page) var(--space-80);
+  background-color: var(--color-background);
+}
+
+.company__logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-company-logo);
+  height: var(--size-company-logo);
+}
+
+/* Each logo keeps the size set by its width and height attributes. */
+.company__logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.company__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-32);
+  min-width: 0;
+  width: 100%;
+}
+
+.company__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  width: 100%;
+}
+
+.company__name {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.company__title {
+  font-size: var(--font-size-heading-200);
+}
+
+.company__text {
+  font-size: var(--font-size-body-200);
+  line-height: var(--line-height-body-200);
+}
+
+.company__banner {
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .company__text {
+    font-size: var(--font-size-body-100);
+    line-height: var(--line-height-body-100);
+  }
+}
+
+@media (min-width: 64rem) {
+  .company {
+    flex-direction: row;
+  }
+}
+
+/* ---- Company overview ---------------------------------------------------- */
+/* Figma: Company overview, Breakpoint = Desktop | Tablet | Mobile */
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-28);
+  padding: var(--space-48) var(--gutter) var(--space-64);
+  background-color: var(--color-background-quiet);
+}
+
+.overview > * {
+  width: 100%;
+  max-width: var(--width-max);
+}
+
+.overview__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.overview__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* Company pages show the meta label in Blue / 900 at 80% */
+.overview .meta {
+  color: var(--color-heading-muted);
+}
+
+.overview__label {
+  font-size: var(--font-size-heading-300);
+  white-space: nowrap;
+}
+
+.overview__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-24);
+  min-width: 0;
+}
+
+.overview__lead {
+  font-size: var(--font-size-body-200);
+  line-height: var(--line-height-body-200);
+}
+
+@media (min-width: 64rem) {
+  /* On desktop the meta label sits above the company name. */
+  .overview__title {
+    flex-direction: column-reverse;
+  }
+
+  .overview__title h1,
+  .overview__title h3 {
+    line-height: var(--line-height-display);
+  }
+
+  .overview__body {
+    flex-direction: row;
+    gap: var(--space-64);
+  }
+}
+
+/* ---- Project ------------------------------------------------------------- */
+/* Figma: project, breakpoint = Desktop | Tablet | Mobile */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-32);
+  padding: var(--space-72) var(--gutter);
+  background-color: var(--color-background);
+}
+
+.project--quiet {
+  background-color: var(--color-background-quiet);
+}
+
+/* Some project sections set all text in brown instead of Ink (Figma override) */
+.project--brown,
+.project--brown .goals {
+  color: var(--color-brown-900);
+}
+
+.project__overview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-32);
+  width: 100%;
+  max-width: var(--width-content);
+}
+
+.project__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  width: 100%;
+}
+
+.project__summary {
+  font-size: var(--font-size-body-200);
+  line-height: var(--line-height-body-200);
+}
+
+.project__brief {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  width: 100%;
+}
+
+.project__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  width: 100%;
+}
+
+.project__label {
+  font-size: var(--font-size-heading-400);
+}
+
+.project__images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+  width: 100%;
+  max-width: var(--width-media);
+  padding-top: var(--space-48);
+}
+
+.image-set {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.image-set__title {
+  font-size: var(--font-size-heading-300);
+}
+
+.image-set__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-16);
+}
+
+/* Two screenshots side by side */
+.image-set__pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.image-set__row--phones {
+  align-items: start;
+}
+
+@media (min-width: 40rem) {
+  .image-set__row,
+  .image-set__pair {
+    gap: var(--space-48);
+  }
+}
+
+@media (min-width: 64rem) {
+  .project__intro {
+    flex-direction: row;
+    gap: var(--space-48);
+  }
+
+  .project__title {
+    flex-shrink: 0;
+    width: var(--width-project-title);
+  }
+
+  .project__summary {
+    flex: 1;
+  }
+
+  .project__brief {
+    flex-direction: row;
+    gap: var(--space-48);
+  }
+
+  .project__brief > .project__block:first-child {
+    flex-shrink: 0;
+    width: var(--width-project-problem);
+  }
+
+  .image-set {
+    gap: var(--space-24);
+  }
+
+  /* Three phones, 252px wide in the 880px column, spread edge to edge */
+  .image-set__row--phones {
+    grid-template-columns: repeat(3, 28.64%);
+    justify-content: space-between;
+  }
+}
+
+/* ---- Link list ----------------------------------------------------------- */
+/* Figma: links in the homepage "Articles" section (on a dark background) */
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.link-list__item + .link-list__item {
+  border-top: var(--size-border) solid var(--color-white);
+}
+
+.link-list__link {
+  display: block;
+  padding: var(--space-16) 0;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-200);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.link-list__item:first-child .link-list__link {
+  padding-top: 0;
+}
+
+.link-list__item:last-child .link-list__link {
+  padding-bottom: 0;
+}
+
+a.link-list__link:hover,
+a.link-list__link.is-hover {
+  color: var(--color-blue-100);
+}
+
+@media (min-width: 40rem) {
+  .link-list__link {
+    font-size: var(--font-size-body-100);
+  }
+}
+
+/* ---- Accent rule --------------------------------------------------------- */
+/* Figma: bar under the "Articles" heading */
+
+.rule {
+  width: 100%;
+  height: var(--size-rule);
+  margin: 0;
+  border: 0;
+  background-color: var(--color-blue-100);
+}

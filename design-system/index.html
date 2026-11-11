@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design system | William Alexander</title>
+  <meta name="description" content="Review page for the portfolio design system: every color, type style, spacing, radius, and shadow token, and every component with its variants and states.">
+  <meta name="robots" content="noindex">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Design system | William Alexander">
+  <meta property="og:description" content="Review page for the portfolio design system: tokens and components with their variants and states.">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=PT+Serif:wght@400;700&display=swap">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="ds-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-nav__logo" href="/" aria-label="William Alexander, home">
+        <img src="/assets/icons/wa-logo.svg" alt="WA logo" width="62" height="24">
+      </a>
+    </nav>
+  </header>
+
+  <main id="main" class="ds-main">
+
+    <div class="ds-intro">
+      <p class="meta">Review page</p>
+      <h1>Design system</h1>
+      <p>Every token and component used by the site, built from the Figma design system and the site design file. Compare each block against Figma. Token names are the CSS custom properties in /css/tokens.css.</p>
+      <nav class="ds-toc" aria-label="On this page">
+        <a href="#logo">Logo</a>
+        <a href="#color">Color</a>
+        <a href="#typography">Typography</a>
+        <a href="#spacing">Spacing</a>
+        <a href="#radii">Radii</a>
+        <a href="#shadows">Shadows</a>
+        <a href="#layout">Layout</a>
+        <a href="#motion">Motion</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#links">Links</a>
+        <a href="#navigation">Navigation</a>
+        <a href="#content">Content blocks</a>
+        <a href="#company">Company card</a>
+        <a href="#overview">Company overview</a>
+        <a href="#project">Project</a>
+      </nav>
+    </div>
+
+    <!-- ================================================================ -->
+    <section class="ds-section" id="logo" aria-labelledby="logo-title">
+      <h2 id="logo-title">Logo</h2>
+      <div class="ds-stage ds-stage--white">
+        <div class="ds-state ds-logo">
+          <img src="/assets/icons/wa-logo.svg" alt="WA logo in Blue 900" width="124" height="48">
+          <p class="ds-token">basic · /assets/icons/wa-logo.svg</p>
+        </div>
+        <div class="ds-state">
+          <img class="ds-favicon" src="/favicon.svg" alt="Favicon: white WA logo on an Ink square" width="64" height="64">
+          <p class="ds-token">Favicon · /favicon.svg, /favicon.ico, /apple-touch-icon.png</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="color" aria-labelledby="color-title">
+      <h2 id="color-title">Color</h2>
+
+      <div class="ds-group">
+        <h3>01 / Blue scale</h3>
+        <p class="ds-note">Two new light surface steps; all three original blues stay unchanged.</p>
+        <ul class="ds-swatches">
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--color-blue-25)"></div>
+            <p class="ds-swatch__name">Blue / 25</p>
+            <p class="ds-swatch__value">#F7FAFE</p>
+            <p class="ds-swatch__use">Near-white canvas</p>
+            <p class="ds-token">--color-blue-25</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-blue-50)"></div>
+            <p class="ds-swatch__name">Blue / 50</p>
+            <p class="ds-swatch__value">#EAF1FD</p>
+            <p class="ds-swatch__use">Soft callouts</p>
+            <p class="ds-token">--color-blue-50</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-blue-100)"></div>
+            <p class="ds-swatch__name">Blue / 100</p>
+            <p class="ds-swatch__value">#D4E4FB</p>
+            <p class="ds-swatch__use">Strong callouts &amp; tags</p>
+            <p class="ds-token">--color-blue-100</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-blue-700)"></div>
+            <p class="ds-swatch__name">Blue / 700</p>
+            <p class="ds-swatch__value">#184280</p>
+            <p class="ds-swatch__use">Links &amp; primary actions</p>
+            <p class="ds-token">--color-blue-700</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-blue-900)"></div>
+            <p class="ds-swatch__name">Blue / 900</p>
+            <p class="ds-swatch__value">#122B4B</p>
+            <p class="ds-swatch__use">Headings &amp; hover</p>
+            <p class="ds-token">--color-blue-900</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ds-group">
+        <h3>02 / Cream scale</h3>
+        <p class="ds-note">Five warm steps. Your original cream is the anchor at 200.</p>
+        <ul class="ds-swatches">
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--color-cream-50)"></div>
+            <p class="ds-swatch__name">Cream / 50</p>
+            <p class="ds-swatch__value">#FFFCF7</p>
+            <p class="ds-swatch__use">Quiet canvas</p>
+            <p class="ds-token">--color-cream-50</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--color-cream-100)"></div>
+            <p class="ds-swatch__name">Cream / 100</p>
+            <p class="ds-swatch__value">#FFF9EF</p>
+            <p class="ds-swatch__use">Subtle surfaces</p>
+            <p class="ds-token">--color-cream-100</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-cream-200)"></div>
+            <p class="ds-swatch__name">Cream / 200</p>
+            <p class="ds-swatch__value">#FFF4E2</p>
+            <p class="ds-swatch__use">Main background</p>
+            <p class="ds-token">--color-cream-200</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-cream-300)"></div>
+            <p class="ds-swatch__name">Cream / 300</p>
+            <p class="ds-swatch__value">#F2E2C8</p>
+            <p class="ds-swatch__use">Section contrast</p>
+            <p class="ds-token">--color-cream-300</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-cream-400)"></div>
+            <p class="ds-swatch__name">Cream / 400</p>
+            <p class="ds-swatch__value">#D9C3A0</p>
+            <p class="ds-swatch__use">Decorative lines</p>
+            <p class="ds-token">--color-cream-400</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ds-group">
+        <h3>03 / Essentials</h3>
+        <p class="ds-note">A reduced neutral set, plus one feedback color for your contact form.</p>
+        <ul class="ds-swatches ds-swatches--4">
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-ink)"></div>
+            <p class="ds-swatch__name">Ink</p>
+            <p class="ds-swatch__value">#202020</p>
+            <p class="ds-swatch__use">Body text</p>
+            <p class="ds-token">--color-ink</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-muted)"></div>
+            <p class="ds-swatch__name">Muted</p>
+            <p class="ds-swatch__value">#4F4F4F</p>
+            <p class="ds-swatch__use">Secondary text</p>
+            <p class="ds-token">--color-muted</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--color-white)"></div>
+            <p class="ds-swatch__name">White</p>
+            <p class="ds-swatch__value">#FFFFFF</p>
+            <p class="ds-swatch__use">Cards &amp; inverse text</p>
+            <p class="ds-token">--color-white</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-functional-red)"></div>
+            <p class="ds-swatch__name">Error</p>
+            <p class="ds-swatch__value">#B83232</p>
+            <p class="ds-swatch__use">Error text + message</p>
+            <p class="ds-token">--color-functional-red</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="callout">
+        <h3 class="callout__title">Use less, with intention</h3>
+        <p>Canvas → Cream / 200 or Blue / 25 · Text → Ink · Links → Blue / 700<br>
+          Callouts → Blue / 50 with Blue / 900 text; stronger highlights → Blue / 100.<br>
+          Primary actions → Blue / 700 with White text; hover → Blue / 900.</p>
+        <p>Use dark text on light blue and cream surfaces; reserve White text for Blue / 700–900.<br>
+          Cream / 400 is decorative, not a form-control outline.</p>
+        <p>Kept lean: purple, brown, green, yellow and gradients stay outside the core palette.<br>
+          Original palette and existing styles are preserved.</p>
+      </div>
+
+      <div class="ds-group">
+        <h3>Outside the core palette</h3>
+        <p class="ds-note">Functional colors and gradients from the color frame, plus two colors that appear in the site designs without a palette style.</p>
+        <ul class="ds-swatches">
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-functional-green)"></div>
+            <p class="ds-swatch__name">Functional / Green</p>
+            <p class="ds-swatch__value">#6FCF97</p>
+            <p class="ds-token">--color-functional-green</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-functional-yellow)"></div>
+            <p class="ds-swatch__name">Functional / Yellow</p>
+            <p class="ds-swatch__value">#F2C94C</p>
+            <p class="ds-token">--color-functional-yellow</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--gradient-linear-blue)"></div>
+            <p class="ds-swatch__name">Gradient / linear blue</p>
+            <p class="ds-swatch__value">#184280 → #2361BE</p>
+            <p class="ds-token">--gradient-linear-blue</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--gradient-radial-blue)"></div>
+            <p class="ds-swatch__name">Gradient / radial blue</p>
+            <p class="ds-swatch__value">#2361BE → #184280</p>
+            <p class="ds-token">--gradient-radial-blue</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--gradient-linear-light)"></div>
+            <p class="ds-swatch__name">Gradient / liner light</p>
+            <p class="ds-swatch__value">#D4E4FB 50% → 0%</p>
+            <p class="ds-token">--gradient-linear-light</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-brown-900)"></div>
+            <p class="ds-swatch__name">Goals list text</p>
+            <p class="ds-swatch__value">#412806</p>
+            <p class="ds-swatch__use">Project component only</p>
+            <p class="ds-token">--color-brown-900</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color" style="background: var(--color-blue-500)"></div>
+            <p class="ds-swatch__name">Gradient stop</p>
+            <p class="ds-swatch__value">#2361BE</p>
+            <p class="ds-swatch__use">Blue gradients only</p>
+            <p class="ds-token">--color-blue-500</p>
+          </li>
+          <li class="ds-swatch">
+            <div class="ds-swatch__color ds-swatch__color--outlined" style="background: var(--color-divider)"></div>
+            <p class="ds-swatch__name">Divider</p>
+            <p class="ds-swatch__value">#4F4F4F at 18%</p>
+            <p class="ds-swatch__use">Hairline rules</p>
+            <p class="ds-token">--color-divider</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="typography" aria-labelledby="typography-title">
+      <h2 id="typography-title">Typography</h2>
+      <p class="ds-note">Montserrat for headings and labels, PT Serif for body. Both load from Google Fonts.</p>
+      <div class="ds-rows">
+        <div class="ds-row">
+          <p class="ds-row__sample heading-50">Heading 50</p>
+          <p class="ds-token">.heading-50 · Montserrat ExtraBold 64 / auto</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample heading-100">Heading 100</p>
+          <p class="ds-token">.heading-100 · Montserrat ExtraBold 48 / auto</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample heading-200">Heading 200</p>
+          <p class="ds-token">.heading-200 · Montserrat ExtraBold 32 / auto</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample heading-300">Heading 300</p>
+          <p class="ds-token">.heading-300 · Montserrat ExtraBold 24 / auto</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample heading-400">Heading 400</p>
+          <p class="ds-token">.heading-400 · Montserrat ExtraBold 16 / auto</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample body-100">Body 100</p>
+          <p class="ds-token">.body-100 · PT Serif Regular 28 / 40</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample body-200">Body 200</p>
+          <p class="ds-token">.body-200 · PT Serif Regular 21 / 32</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample body-300">Body 300</p>
+          <p class="ds-token">.body-300 · PT Serif Regular 18 / 28</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample body-300-bold">Body 300 bold</p>
+          <p class="ds-token">.body-300-bold · PT Serif Bold 18 / 28</p>
+        </div>
+        <div class="ds-row">
+          <p class="ds-row__sample body-400">Body 400</p>
+          <p class="ds-token">.body-400 · Montserrat Bold 16 / 24, 1.5px tracking, capitalize</p>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Responsive titles</h3>
+        <div class="ds-table-wrap">
+          <table class="ds-table">
+            <thead>
+              <tr><th scope="col">Token</th><th scope="col">Mobile</th><th scope="col">Tablet</th><th scope="col">Desktop</th><th scope="col">Used for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="ds-token">--font-size-page-title</td><td>32</td><td>48</td><td>64</td><td>h1, company name</td></tr>
+              <tr><td class="ds-token">--font-size-section-title</td><td>32</td><td>48</td><td>48</td><td>h2, project name</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="spacing" aria-labelledby="spacing-title">
+      <h2 id="spacing-title">Spacing</h2>
+      <p class="ds-note">The design system has no spacing variables. This scale lists every value measured in the site design frames.</p>
+      <ul class="ds-scale">
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-4)"></span><span class="ds-token">--space-4</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-8)"></span><span class="ds-token">--space-8</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-12)"></span><span class="ds-token">--space-12</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-16)"></span><span class="ds-token">--space-16</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-20)"></span><span class="ds-token">--space-20</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-24)"></span><span class="ds-token">--space-24</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-28)"></span><span class="ds-token">--space-28</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-32)"></span><span class="ds-token">--space-32</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-40)"></span><span class="ds-token">--space-40</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-44)"></span><span class="ds-token">--space-44</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-48)"></span><span class="ds-token">--space-48</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-64)"></span><span class="ds-token">--space-64</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-72)"></span><span class="ds-token">--space-72</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-80)"></span><span class="ds-token">--space-80</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-88)"></span><span class="ds-token">--space-88</span></li>
+        <li class="ds-scale__item"><span class="ds-scale__bar" style="width: var(--space-130)"></span><span class="ds-token">--space-130</span></li>
+      </ul>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="radii" aria-labelledby="radii-title">
+      <h2 id="radii-title">Radii</h2>
+      <p class="ds-note">The design system has no radius variables. These values are measured from the designs.</p>
+      <div class="ds-tiles">
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-2)"></div><p class="ds-token">--radius-2<br>Buttons</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-4)"></div><p class="ds-token">--radius-4</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-8)"></div><p class="ds-token">--radius-8<br>Swatches</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-12)"></div><p class="ds-token">--radius-12<br>Callout</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-24) var(--radius-24) 0 0"></div><p class="ds-token">--radius-24<br>Project images</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-48) 0 var(--radius-48) 0"></div><p class="ds-token">--radius-48<br>Company banner</p></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="shadows" aria-labelledby="shadows-title">
+      <h2 id="shadows-title">Shadows</h2>
+      <div class="ds-tiles">
+        <div class="ds-tile"><div class="ds-tile__box ds-tile__box--shadow" style="box-shadow: var(--shadow-1)"></div><p class="ds-token">--shadow-1<br>bw - level 1</p></div>
+        <div class="ds-tile"><div class="ds-tile__box ds-tile__box--shadow" style="box-shadow: var(--shadow-2)"></div><p class="ds-token">--shadow-2<br>bw - level 2</p></div>
+        <div class="ds-tile"><div class="ds-tile__box ds-tile__box--shadow" style="box-shadow: var(--shadow-3)"></div><p class="ds-token">--shadow-3<br>bw - level 3</p></div>
+        <div class="ds-tile"><div class="ds-tile__box ds-tile__box--shadow" style="box-shadow: var(--shadow-4)"></div><p class="ds-token">--shadow-4<br>bw - level 4</p></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="layout" aria-labelledby="layout-title">
+      <h2 id="layout-title">Layout</h2>
+      <div class="ds-table-wrap">
+        <table class="ds-table">
+          <thead>
+            <tr><th scope="col">Token</th><th scope="col">Mobile, up to 639px</th><th scope="col">Tablet, 640px and up</th><th scope="col">Desktop, 1024px and up</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="ds-token">Figma frame width</td><td>390</td><td>880</td><td>1280</td></tr>
+            <tr><td class="ds-token">--gutter</td><td>24</td><td>64</td><td>88</td></tr>
+            <tr><td class="ds-token">--gutter-wide</td><td>24</td><td>64</td><td>130</td></tr>
+            <tr><td class="ds-token">--width-max</td><td colspan="3">1440</td></tr>
+            <tr><td class="ds-token">--width-content</td><td colspan="3">1200</td></tr>
+            <tr><td class="ds-token">--width-media</td><td colspan="3">880</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="motion" aria-labelledby="motion-title">
+      <h2 id="motion-title">Motion</h2>
+      <p class="ds-note">Not in Figma. Added for hover and focus states, scroll reveals, and page transitions. All of it turns off when the visitor asks for reduced motion.</p>
+      <div class="ds-table-wrap">
+        <table class="ds-table">
+          <thead>
+            <tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Used for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="ds-token">--duration-fast</td><td>150ms</td><td>Hover and focus color changes</td></tr>
+            <tr><td class="ds-token">--duration-base</td><td>250ms</td><td>Page cross-fade, nav link underline</td></tr>
+            <tr><td class="ds-token">--duration-slow</td><td>600ms</td><td>Scroll reveal (sections on this page use it)</td></tr>
+            <tr><td class="ds-token">--ease-out</td><td>cubic-bezier(0.22, 1, 0.36, 1)</td><td>All transitions</td></tr>
+            <tr><td class="ds-token">--reveal-distance</td><td>16px</td><td>Scroll reveal rise</td></tr>
+            <tr><td class="ds-token">--focus-width, --focus-offset</td><td>2px, 3px</td><td>Keyboard focus ring</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="buttons" aria-labelledby="buttons-title">
+      <h2 id="buttons-title">Buttons</h2>
+      <p class="ds-note">Figma has type (primary, secondary) and state (Default, Inverse). Hover and focus are not in Figma and are proposed here.</p>
+
+      <div class="ds-group">
+        <h3>Primary</h3>
+        <div class="ds-stage">
+          <div class="ds-state"><a class="button" href="#buttons">content</a><p class="ds-token">Default</p></div>
+          <div class="ds-state"><a class="button is-hover" href="#buttons">content</a><p class="ds-token">Hover</p></div>
+          <div class="ds-state"><a class="button is-focus" href="#buttons">content</a><p class="ds-token">Focus</p></div>
+        </div>
+        <div class="ds-stage ds-stage--dark on-dark">
+          <div class="ds-state"><a class="button button--inverse" href="#buttons">content</a><p class="ds-token">Inverse</p></div>
+          <div class="ds-state"><a class="button button--inverse is-hover" href="#buttons">content</a><p class="ds-token">Inverse hover</p></div>
+          <div class="ds-state"><a class="button button--inverse is-focus" href="#buttons">content</a><p class="ds-token">Inverse focus</p></div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Secondary</h3>
+        <div class="ds-stage">
+          <div class="ds-state"><a class="button button--secondary" href="#buttons">content</a><p class="ds-token">Default</p></div>
+          <div class="ds-state"><a class="button button--secondary is-hover" href="#buttons">content</a><p class="ds-token">Hover</p></div>
+          <div class="ds-state"><a class="button button--secondary is-focus" href="#buttons">content</a><p class="ds-token">Focus</p></div>
+        </div>
+        <div class="ds-stage ds-stage--dark on-dark">
+          <div class="ds-state"><a class="button button--secondary button--inverse" href="#buttons">content</a><p class="ds-token">Inverse</p></div>
+          <div class="ds-state"><a class="button button--secondary button--inverse is-hover" href="#buttons">content</a><p class="ds-token">Inverse hover</p></div>
+          <div class="ds-state"><a class="button button--secondary button--inverse is-focus" href="#buttons">content</a><p class="ds-token">Inverse focus</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="links" aria-labelledby="links-title">
+      <h2 id="links-title">Links</h2>
+
+      <div class="ds-group">
+        <h3>Text link</h3>
+        <p class="ds-note">No link component in Figma. Built from the usage guideline: Links → Blue / 700, hover → Blue / 900.</p>
+        <div class="ds-stage">
+          <div class="ds-state"><a href="#links">Text link</a><p class="ds-token">Default</p></div>
+          <div class="ds-state"><a class="is-hover" href="#links">Text link</a><p class="ds-token">Hover</p></div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Link list and accent rule</h3>
+        <div class="ds-stage ds-stage--dark ds-stage--column on-dark">
+          <hr class="rule">
+          <ul class="link-list">
+            <li class="link-list__item"><a class="link-list__link" href="#links">The tech market going into 2024</a></li>
+            <li class="link-list__item"><a class="link-list__link is-hover" href="#links">You're not a bad UX designer</a></li>
+            <li class="link-list__item"><a class="link-list__link" href="#links">Understanding designer burnout</a></li>
+          </ul>
+          <p class="ds-token">.rule, .link-list · the middle link shows the hover state</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="navigation" aria-labelledby="navigation-title">
+      <h2 id="navigation-title">Navigation</h2>
+
+      <div class="ds-group">
+        <h3>Header nav</h3>
+        <p class="ds-note">As drawn in Figma: logo only, the menu items slot is empty.</p>
+        <div class="ds-stage ds-stage--quiet ds-stage--flush">
+          <div class="site-header">
+            <div class="site-nav">
+              <a class="site-nav__logo" href="/" aria-label="William Alexander, home">
+                <img src="/assets/icons/wa-logo.svg" alt="WA logo" width="62" height="24">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Header nav with menu items</h3>
+        <p class="ds-note">Proposed link style for the empty slot, in case menu items are added. The second item shows hover.</p>
+        <div class="ds-stage ds-stage--quiet ds-stage--flush">
+          <div class="site-header">
+            <div class="site-nav">
+              <a class="site-nav__logo" href="/" aria-label="William Alexander, home">
+                <img src="/assets/icons/wa-logo.svg" alt="WA logo" width="62" height="24">
+              </a>
+              <ul class="site-nav__menu">
+                <li><a class="site-nav__link" href="#navigation">Menu item</a></li>
+                <li><a class="site-nav__link is-hover" href="#navigation">Menu item</a></li>
+                <li><a class="site-nav__link" href="#navigation">Menu item</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Footer nav</h3>
+        <div class="ds-stage ds-stage--quiet ds-stage--flush">
+          <div class="site-footer">
+            <div class="site-footer__nav">
+              <a class="button button--secondary" href="#navigation">View all companies</a>
+              <a class="button button--secondary" href="#navigation">Next company</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="content" aria-labelledby="content-title">
+      <h2 id="content-title">Content blocks</h2>
+
+      <div class="ds-group">
+        <h3>Meta label</h3>
+        <div class="ds-stage">
+          <p class="meta">Industry | Service | Userbase</p>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Divider</h3>
+        <div class="ds-stage ds-stage--column">
+          <hr class="divider">
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Snippet</h3>
+        <div class="ds-stage ds-stage--quiet ds-stage--column">
+          <div class="snippet">
+            <p class="snippet__title">Main text</p>
+            <p>Sub text</p>
+          </div>
+        </div>
+        <p class="ds-note">Snippet list: one column on mobile and desktop, two columns on tablet.</p>
+        <div class="ds-stage ds-stage--quiet ds-stage--column">
+          <div class="snippet-list">
+            <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+            <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+            <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+            <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Callout</h3>
+        <p class="ds-note">Shown in use in the Color section above.</p>
+      </div>
+
+      <div class="ds-group">
+        <h3>Goals list</h3>
+        <div class="ds-stage ds-stage--column">
+          <div class="goals">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur</li>
+              <li>Sed sit non enim in tempus blandit</li>
+              <li>Consectetur vestibulum in arcu rhoncus convallis magna sollicitudin.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Image frames</h3>
+        <div class="ds-stage ds-stage--column">
+          <div class="frame frame--banner">
+            <img src="/assets/images/placeholder-banner.svg" alt="Placeholder for a company banner image" width="878" height="375" loading="lazy">
+          </div>
+          <p class="ds-token">.frame--banner</p>
+          <div class="image-set__row">
+            <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+            <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+            <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+          </div>
+          <p class="ds-token">.frame--mobile</p>
+          <div class="frame frame--desktop">
+            <img src="/assets/images/placeholder-desktop.svg" alt="Placeholder for a desktop screen" width="880" height="596" loading="lazy">
+          </div>
+          <p class="ds-token">.frame--desktop</p>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>More image frame variants</h3>
+        <p class="ds-note">Screenshots of any height, larger corners, two side by side, three phones, a stacked banner, and an image that carries its own cards.</p>
+        <div class="ds-stage ds-stage--column">
+          <div class="frame frame--shot">
+            <img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot" width="878" height="375" loading="lazy">
+          </div>
+          <p class="ds-token">.frame--shot · keeps the image's own height</p>
+          <div class="frame frame--shot frame--shot-lg">
+            <img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot with larger corners" width="878" height="375" loading="lazy">
+          </div>
+          <p class="ds-token">.frame--shot .frame--shot-lg · 48px top corners</p>
+          <div class="image-set__pair">
+            <div class="frame frame--shot"><img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot, left" width="878" height="375" loading="lazy"></div>
+            <div class="frame frame--shot"><img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot, right" width="878" height="375" loading="lazy"></div>
+          </div>
+          <p class="ds-token">.image-set__pair</p>
+          <div class="image-set__row image-set__row--phones">
+            <div class="frame frame--phone"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a phone screen" width="262" height="566" loading="lazy"></div>
+            <div class="frame frame--phone"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a phone screen" width="262" height="566" loading="lazy"></div>
+            <div class="frame frame--phone"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a phone screen" width="262" height="566" loading="lazy"></div>
+          </div>
+          <p class="ds-token">.image-set__row--phones .frame--phone · 32px top corners</p>
+          <div class="frame frame--banner frame--stack">
+            <div class="frame__stack">
+              <div class="frame__layer frame__layer--back"><img src="/assets/images/snagajob-banner-back.webp" alt="Placeholder layer, back" width="792" height="374" loading="lazy"></div>
+              <div class="frame__layer frame__layer--front"><img src="/assets/images/snagajob-banner-front.webp" alt="Placeholder layer, front" width="785" height="375" loading="lazy"></div>
+            </div>
+          </div>
+          <p class="ds-token">.frame--banner .frame--stack</p>
+          <div class="frame frame--shot frame--bare">
+            <img src="/assets/images/bixal-research.webp" alt="Bixal research boards, an image with its own rounded cards" width="880" height="348" loading="lazy">
+          </div>
+          <p class="ds-token">.frame--bare · no frame shadow or corners</p>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h3>Project section variants</h3>
+        <p class="ds-note">Cream / 50 background and brown text are Figma overrides on some project sections. Text is Ink by default.</p>
+        <div class="ds-stage ds-stage--flush">
+          <div class="project project--quiet project--brown">
+            <div class="project__overview">
+              <div class="project__brief">
+                <div class="project__block">
+                  <h4 class="project__label">Problem</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur. Non elementum netus consectetur volutpat tincidunt.</p>
+                </div>
+                <div class="project__block">
+                  <h4 class="project__label">Goals</h4>
+                  <div class="goals"><ul><li>Lorem ipsum dolor sit amet consectetur</li><li>Sed sit non enim in tempus blandit</li></ul></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="ds-token">.project--quiet .project--brown</p>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="company" aria-labelledby="company-title">
+      <h2 id="company-title">Company card</h2>
+      <div class="ds-stage ds-stage--flush">
+        <article class="company">
+          <div class="company__logo">
+            <img src="/assets/images/straighterline-logo.webp" alt="Straighterline logo" width="60" height="60" loading="lazy">
+          </div>
+          <div class="company__content">
+            <div class="company__details">
+              <div class="company__name">
+                <h3 class="company__title">Company name</h3>
+                <p class="meta">Industry | Service | Userbase</p>
+              </div>
+              <p class="company__text">Company details</p>
+            </div>
+            <a class="button button--secondary" href="#company">View work</a>
+            <div class="company__banner frame frame--banner">
+              <img src="/assets/images/placeholder-banner.svg" alt="Placeholder for a company banner image" width="878" height="375" loading="lazy">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="overview" aria-labelledby="overview-title">
+      <h2 id="overview-title">Company overview</h2>
+      <div class="ds-stage ds-stage--flush">
+        <div class="overview">
+          <div class="overview__title">
+            <h3 class="heading-page">Company name</h3>
+            <p class="meta">Industry | Service | Userbase</p>
+          </div>
+          <hr class="divider">
+          <div class="overview__body">
+            <h4 class="overview__label">Overview of impact</h4>
+            <div class="overview__content">
+              <p class="overview__lead">Lorem ipsum dolor sit amet consectetur. Ultrices elit praesent massa netus elementum. Nisl aliquam feugiat porta eget sem. Porta hac odio id justo purus maecenas bibendum et.</p>
+              <div class="snippet-list">
+                <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                <div class="snippet"><p class="snippet__title">Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="overview__cta">
+            <a class="button button--secondary" href="#overview">View case studies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="ds-section reveal" id="project" aria-labelledby="project-title">
+      <h2 id="project-title">Project</h2>
+      <div class="ds-stage ds-stage--flush">
+        <div class="project">
+          <div class="project__overview">
+            <div class="project__intro">
+              <h3 class="project__title heading-section">Project name</h3>
+              <p class="project__summary">Lorem ipsum dolor sit amet consectetur. Aliquam non semper pretium turpis elit ut et.</p>
+            </div>
+            <hr class="divider">
+            <div class="project__brief">
+              <div class="project__block">
+                <h4 class="project__label">Problem</h4>
+                <p>Lorem ipsum dolor sit amet consectetur. Non elementum netus consectetur volutpat tincidunt. Pretium risus nunc sit pharetra elementum mauris lacus varius.</p>
+              </div>
+              <div class="project__block">
+                <h4 class="project__label">Goals</h4>
+                <div class="goals">
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur</li>
+                    <li>Sed sit non enim in tempus blandit</li>
+                    <li>Consectetur vestibulum in arcu rhoncus convallis magna sollicitudin.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="project__block">
+              <h4 class="project__label">Details</h4>
+              <p>Lorem ipsum dolor sit amet consectetur. Nulla elit enim lectus urna pellentesque sed. Libero at dolor non diam. Vitae quam tellus volutpat non sed dui amet morbi. Vitae habitasse sed morbi arcu ipsum mollis pharetra aenean tempor. Sagittis sit sagittis integer vitae. At ut phasellus integer nibh volutpat ut ut ac habitant. A nibh dis commodo integer volutpat risus. Senectus amet at eget eleifend nulla eu.</p>
+            </div>
+            <a class="button button--secondary" href="#project">View case study</a>
+          </div>
+          <div class="project__images">
+            <div class="image-set">
+              <h4 class="image-set__title">Header</h4>
+              <div class="image-set__row">
+                <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+                <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+                <div class="frame frame--mobile"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a mobile screen" width="262" height="566" loading="lazy"></div>
+              </div>
+            </div>
+            <div class="image-set">
+              <h4 class="image-set__title">Header</h4>
+              <div class="frame frame--desktop">
+                <img src="/assets/images/placeholder-desktop.svg" alt="Placeholder for a desktop screen" width="880" height="596" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

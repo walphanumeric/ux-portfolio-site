@@ -1,0 +1,16 @@
+/* ==========================================================================
+   404 page only (404.html)
+   Uses tokens only. No raw colors, font sizes, or spacing in this file.
+   ========================================================================== */
+
+.not-found {
+  padding: var(--space-64) var(--gutter-wide) var(--space-80);
+  background-color: var(--color-background-hero);
+}
+
+.not-found__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-32);
+}

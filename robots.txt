@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /design-system/
+
+Sitemap: https://wa-ux.com/sitemap.xml

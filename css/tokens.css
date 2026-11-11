@@ -1,0 +1,204 @@
+/* ==========================================================================
+   Design tokens
+   Source: Figma "Design system" file (Website section) plus values measured
+   from the "Portfolio website 2.0" design frames where the design system
+   has no variable (spacing, radii, sizes, motion).
+   This is the only file allowed to contain raw colors, sizes, and spacing.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: blue scale ------------------------------------------------ */
+  --color-blue-25: #f7fafe;   /* Near-white canvas */
+  --color-blue-50: #eaf1fd;   /* Soft callouts */
+  --color-blue-100: #d4e4fb;  /* Strong callouts & tags */
+  --color-blue-700: #184280;  /* Links & primary actions */
+  --color-blue-900: #122b4b;  /* Headings & hover */
+
+  /* ---- Color: cream scale ----------------------------------------------- */
+  --color-cream-50: #fffcf7;  /* Quiet canvas */
+  --color-cream-100: #fff9ef; /* Subtle surfaces */
+  --color-cream-200: #fff4e2; /* Main background */
+  --color-cream-300: #f2e2c8; /* Section contrast */
+  --color-cream-400: #d9c3a0; /* Decorative lines */
+
+  /* ---- Color: essentials ------------------------------------------------ */
+  --color-ink: #202020;       /* Body text */
+  --color-muted: #4f4f4f;     /* Secondary text */
+  --color-white: #ffffff;     /* Cards & inverse text */
+
+  /* ---- Color: functional ------------------------------------------------ */
+  --color-functional-red: #b83232;    /* Error text + message */
+  --color-functional-green: #6fcf97;
+  --color-functional-yellow: #f2c94c;
+
+  /* ---- Color: used in the site designs but not in the palette ----------- */
+  --color-brown-900: #412806;         /* Goals list text in the project component */
+  --color-blue-500: #2361be;          /* Second stop of the blue gradients */
+
+  /* ---- Gradients (outside the core palette per the usage guidelines) ---- */
+  --gradient-linear-blue: linear-gradient(270deg, var(--color-blue-700) 32%, var(--color-blue-500) 68%);
+  --gradient-radial-blue: radial-gradient(circle, var(--color-blue-500) 0%, var(--color-blue-700) 100%);
+  --gradient-linear-light: linear-gradient(180deg, rgb(212 228 251 / 0.5) 0%, rgb(212 228 251 / 0.5) 51%, rgb(212 228 251 / 0) 100%);
+
+  /* ---- Color: semantic aliases ------------------------------------------ */
+  --color-background: var(--color-cream-200);
+  --color-background-quiet: var(--color-cream-50);
+  --color-background-contrast: var(--color-cream-300);
+  --color-background-hero: var(--color-blue-100);
+  --color-background-inverse: var(--color-blue-900);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-muted);
+  --color-text-inverse: var(--color-white);
+  --color-heading: var(--color-blue-900);
+  --color-link: var(--color-blue-700);
+  --color-link-hover: var(--color-blue-900);
+  --color-callout: var(--color-blue-50);
+  --color-divider: rgb(79 79 79 / 0.18); /* Muted at 18% opacity */
+  --color-heading-muted: rgb(18 43 75 / 0.8); /* Blue 900 at 80%, meta label on company pages */
+  --color-focus: var(--color-blue-700);
+  --color-focus-inverse: var(--color-cream-50);
+
+  /* ---- Typography: families and weights --------------------------------- */
+  --font-heading: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "PT Serif", Georgia, "Times New Roman", serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ---- Typography: Website/Heading -------------------------------------- */
+  --font-size-heading-50: 4rem;     /* 64px */
+  --font-size-heading-100: 3rem;    /* 48px */
+  --font-size-heading-200: 2rem;    /* 32px */
+  --font-size-heading-300: 1.5rem;  /* 24px */
+  --font-size-heading-400: 1rem;    /* 16px, used in designs, missing from the type frame */
+  --line-height-heading: 1.22;      /* Figma "auto" for Montserrat */
+  --line-height-display: 1.15;      /* Homepage banner headline */
+  --line-height-intro: 1.35;        /* Homepage intro paragraph, matches no Figma text style */
+
+  /* ---- Typography: Website/Body ----------------------------------------- */
+  --font-size-body-100: 1.75rem;    /* 28px */
+  --line-height-body-100: 2.5rem;   /* 40px */
+  --font-size-body-200: 1.3125rem;  /* 21px */
+  --line-height-body-200: 2rem;     /* 32px */
+  --font-size-body-300: 1.125rem;   /* 18px */
+  --line-height-body-300: 1.75rem;  /* 28px */
+  --font-size-body-400: 1rem;       /* 16px, Montserrat Bold label */
+  --line-height-body-400: 1.5rem;   /* 24px */
+  --letter-spacing-body-400: 0.09375em; /* 1.5px at 16px */
+
+  /* ---- Typography: button label (not a named style in Figma) ------------ */
+  --font-size-button: 0.875rem;     /* 14px */
+
+  /* ---- Typography: responsive aliases (mobile first) -------------------- */
+  --font-size-page-title: var(--font-size-heading-200);
+  --font-size-section-title: var(--font-size-heading-200);
+
+  /* ---- Spacing scale (name = px value) ---------------------------------- */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-28: 1.75rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-44: 2.75rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-72: 4.5rem;
+  --space-80: 5rem;
+  --space-88: 5.5rem;
+  --space-130: 8.125rem;
+
+  /* ---- Layout: responsive gutters (mobile first) ------------------------ */
+  --gutter: var(--space-24);        /* Company and project pages */
+  --gutter-wide: var(--space-24);   /* Homepage sections */
+  /* Side padding that keeps homepage content inside a --width-page column,
+     centered. Never smaller than --gutter-wide. The 100% resolves against
+     the width of the element that uses this token. */
+  --gutter-page: max(var(--gutter-wide), calc((100% - var(--width-page)) / 2 + var(--gutter-wide)));
+
+  /* ---- Layout: widths --------------------------------------------------- */
+  --width-max: 90rem;               /* 1440px */
+  --width-page: 80.25rem;           /* 1284px: Figma "company" max width, side padding included; every homepage section below the banner uses it */
+  --width-content: 75rem;           /* 1200px */
+  --width-media: 55rem;             /* 880px */
+  --width-hero-title: 49.6875rem;   /* 795px */
+  --width-project-title: 28rem;     /* 448px */
+  --width-project-problem: 33rem;   /* 528px */
+  --width-list-indent: 1.6875rem;   /* 27px */
+
+  /* ---- Sizes ------------------------------------------------------------ */
+  --size-logo-width: 3.875rem;      /* 62px */
+  --size-logo-height: 1.5rem;       /* 24px */
+  --size-button-min-width: 8.625rem;/* 138px */
+  --size-company-logo: 7.5rem;      /* 120px */
+  --size-company-logo-mark: 3.75rem;/* 60px */
+  --size-border: 0.0625rem;         /* 1px */
+  --size-rule: 0.5rem;              /* 8px accent rule */
+
+  /* ---- Radii ------------------------------------------------------------ */
+  --radius-2: 0.125rem;             /* Buttons */
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;               /* Swatches */
+  --radius-12: 0.75rem;             /* Callout */
+  --radius-24: 1.5rem;              /* Project image frames */
+  --radius-32: 2rem;                /* Snagajob phone screenshots */
+  --radius-48: 3rem;                /* Company banner */
+
+  /* ---- Shadows: "bw - level 1" to "bw - level 4" ------------------------ */
+  --shadow-1: 0 0.125rem 1rem 0 rgb(32 32 32 / 0.08), 0 0 0.25rem 0 rgb(32 32 32 / 0.04);
+  --shadow-2: 0 0.125rem 1.5rem 0.0625rem rgb(32 32 32 / 0.12), 0 0 0.25rem 0 rgb(32 32 32 / 0.03);
+  --shadow-3: 0 0.25rem 2rem 0.125rem rgb(32 32 32 / 0.16), 0 0 0.25rem 0 rgb(0 0 0 / 0.02);
+  --shadow-4: 0 0.375rem 3rem 0.125rem rgb(32 32 32 / 0.24), 0 0 0.25rem 0 rgb(0 0 0 / 0.01);
+
+  /* ---- Motion (not in Figma, added for the site) ------------------------ */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-distance: 1rem;
+
+  /* ---- Focus ring (not in Figma, added for the site) -------------------- */
+  --focus-width: 0.125rem;
+  --focus-offset: 0.1875rem;
+
+  /* ---- Aspect ratios ---------------------------------------------------- */
+  --ratio-company-banner: 878 / 376;
+  --ratio-stack-canvas: 880 / 575;
+  --ratio-device-mobile: 251 / 544;
+  --ratio-device-desktop: 880 / 596;
+}
+
+/* Breakpoints (custom properties cannot be used in media queries, so the two
+   values below are repeated in the other CSS files):
+   - Mobile:  up to 639px   (design frame 390px)
+   - Tablet:  640px and up  (design frame 880px)
+   - Desktop: 1024px and up (design frame 1280px) */
+
+@media (min-width: 40rem) {
+  :root {
+    --gutter: var(--space-64);
+    --gutter-wide: var(--space-64);
+    --font-size-page-title: var(--font-size-heading-100);
+    --font-size-section-title: var(--font-size-heading-100);
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --gutter: var(--space-88);
+    --gutter-wide: var(--space-130);
+    --font-size-page-title: var(--font-size-heading-50);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --reveal-distance: 0rem;
+  }
+}
