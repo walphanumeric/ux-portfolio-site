@@ -291,10 +291,12 @@
   aspect-ratio: var(--ratio-company-banner);
 }
 
+/* Project image corners: 24px on tablet and desktop, 16px on mobile (--radius-image) */
 .frame--mobile,
 .frame--desktop,
-.frame--shot {
-  border-radius: var(--radius-24) var(--radius-24) 0 0;
+.frame--shot,
+.frame--phone {
+  border-radius: var(--radius-image) var(--radius-image) 0 0;
 }
 
 /* Screenshot of any height: keeps the image's own proportions */
@@ -308,15 +310,7 @@
   box-shadow: none;
 }
 
-/* Larger top corners, used by the Snagajob screenshots (Figma 48 and 32) */
-.frame--shot-lg {
-  border-radius: var(--radius-48) var(--radius-48) 0 0;
-}
-
-.frame--phone {
-  border-radius: var(--radius-32) var(--radius-32) 0 0;
-}
-
+/* Phone screenshots: any height, three side by side */
 .frame--phone img {
   aspect-ratio: auto;
 }

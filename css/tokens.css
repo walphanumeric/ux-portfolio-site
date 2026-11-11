@@ -143,8 +143,9 @@
   --radius-4: 0.25rem;
   --radius-8: 0.5rem;               /* Swatches */
   --radius-12: 0.75rem;             /* Callout */
-  --radius-24: 1.5rem;              /* Project image frames */
-  --radius-32: 2rem;                /* Snagajob phone screenshots */
+  --radius-16: 1rem;                /* Project image frames on mobile */
+  --radius-24: 1.5rem;              /* Project image frames on tablet and desktop */
+  --radius-image: var(--radius-16); /* Project image corner, 16 on mobile and 24 from tablet up */
   --radius-48: 3rem;                /* Company banner */
 
   /* ---- Shadows: "bw - level 1" to "bw - level 4" ------------------------ */
@@ -183,6 +184,7 @@
     --gutter-wide: var(--space-64);
     --font-size-page-title: var(--font-size-heading-100);
     --font-size-section-title: var(--font-size-heading-100);
+    --radius-image: var(--radius-24);
   }
 }
 

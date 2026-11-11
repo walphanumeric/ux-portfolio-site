@@ -366,7 +366,8 @@
         <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-4)"></div><p class="ds-token">--radius-4</p></div>
         <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-8)"></div><p class="ds-token">--radius-8<br>Swatches</p></div>
         <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-12)"></div><p class="ds-token">--radius-12<br>Callout</p></div>
-        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-24) var(--radius-24) 0 0"></div><p class="ds-token">--radius-24<br>Project images</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-16) var(--radius-16) 0 0"></div><p class="ds-token">--radius-16<br>Project images, mobile</p></div>
+        <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-24) var(--radius-24) 0 0"></div><p class="ds-token">--radius-24<br>Project images, tablet and up</p></div>
         <div class="ds-tile"><div class="ds-tile__box" style="border-radius: var(--radius-48) 0 var(--radius-48) 0"></div><p class="ds-token">--radius-48<br>Company banner</p></div>
       </div>
     </section>
@@ -611,16 +612,12 @@
 
       <div class="ds-group">
         <h3>More image frame variants</h3>
-        <p class="ds-note">Screenshots of any height, larger corners, two side by side, three phones, a stacked banner, and an image that carries its own cards.</p>
+        <p class="ds-note">Screenshots of any height, two side by side, three phones, a stacked banner, and an image that carries its own cards. All project images share one corner radius.</p>
         <div class="ds-stage ds-stage--column">
           <div class="frame frame--shot">
             <img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot" width="878" height="375" loading="lazy">
           </div>
-          <p class="ds-token">.frame--shot · keeps the image's own height</p>
-          <div class="frame frame--shot frame--shot-lg">
-            <img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot with larger corners" width="878" height="375" loading="lazy">
-          </div>
-          <p class="ds-token">.frame--shot .frame--shot-lg · 48px top corners</p>
+          <p class="ds-token">.frame--shot · keeps the image's own height · corners 16px on mobile, 24px from tablet up (--radius-image)</p>
           <div class="image-set__pair">
             <div class="frame frame--shot"><img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot, left" width="878" height="375" loading="lazy"></div>
             <div class="frame frame--shot"><img src="/assets/images/placeholder-banner.svg" alt="Placeholder screenshot, right" width="878" height="375" loading="lazy"></div>
@@ -631,7 +628,7 @@
             <div class="frame frame--phone"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a phone screen" width="262" height="566" loading="lazy"></div>
             <div class="frame frame--phone"><img src="/assets/images/placeholder-mobile.svg" alt="Placeholder for a phone screen" width="262" height="566" loading="lazy"></div>
           </div>
-          <p class="ds-token">.image-set__row--phones .frame--phone · 32px top corners</p>
+          <p class="ds-token">.image-set__row--phones .frame--phone</p>
           <div class="frame frame--banner frame--stack">
             <div class="frame__stack">
               <div class="frame__layer frame__layer--back"><img src="/assets/images/snagajob-banner-back.webp" alt="Placeholder layer, back" width="792" height="374" loading="lazy"></div>
