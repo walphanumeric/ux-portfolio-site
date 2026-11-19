@@ -8,7 +8,10 @@
    ========================================================================== */
 
 /* ---- Button -------------------------------------------------------------- */
-/* Figma: Button, type = primary | secondary, state = Default | Inverse */
+/* Figma: Button, type = primary | secondary, state = Default | Inverse.
+   Primary and secondary labels use Website/Body/400, so "Contact me"
+   renders as "Contact Me". The inverse secondary label stays the smaller
+   button size (the "See all" instance on the homepage). */
 
 .button {
   display: inline-flex;
@@ -21,10 +24,12 @@
   background-color: var(--color-blue-900);
   color: var(--color-white);
   font-family: var(--font-heading);
-  font-size: var(--font-size-button);
+  font-size: var(--font-size-body-400);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-body-400);
+  letter-spacing: var(--letter-spacing-body-400);
   text-align: center;
+  text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
@@ -85,6 +90,10 @@
   border-color: var(--color-cream-50);
   background-color: transparent;
   color: var(--color-cream-50);
+  font-size: var(--font-size-button);
+  line-height: var(--line-height-heading);
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .button--secondary.button--inverse:hover,
@@ -369,8 +378,112 @@
   object-position: top left;
 }
 
+/* ---- Clarity redirect ---------------------------------------------------- */
+/* Figma: clarity redirect, breakpoints mobile / tablet / desktop.
+   The whole container is the link. */
+
+.clarity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-16);
+  width: 100%;
+  padding: var(--space-24) var(--space-48) var(--space-24) var(--space-32);
+  border-radius: var(--radius-48);
+  background-color: var(--color-background-inverse);
+  color: var(--color-cream-50);
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.clarity:hover,
+.clarity.is-hover {
+  background-color: var(--color-blue-700);
+  color: var(--color-cream-50);
+}
+
+.clarity:focus-visible {
+  outline-color: var(--color-focus-inverse);
+}
+
+.clarity__logo {
+  flex-shrink: 0;
+}
+
+.clarity__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+  width: 100%;
+  min-width: 0;
+}
+
+.clarity__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  min-width: 0;
+}
+
+.clarity__eyebrow {
+  color: var(--color-cream-300);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-300);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body-300);
+}
+
+.clarity__title {
+  color: var(--color-cream-50);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-100);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body-100);
+}
+
+.clarity__cta {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-16);
+  color: var(--color-cream-50);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body-400);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body-400);
+  letter-spacing: var(--letter-spacing-body-400);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+@media (min-width: 40rem) {
+  .clarity {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .clarity__content {
+    flex: 1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .clarity__content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .clarity__text {
+    flex: 1;
+    width: auto;
+  }
+}
+
 /* ---- Company card -------------------------------------------------------- */
-/* Figma: company (homepage "Past work" entry) */
+/* Figma: company (homepage "Past Companies" entry) */
 
 .company {
   display: flex;

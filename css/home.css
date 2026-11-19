@@ -63,6 +63,11 @@
   line-height: var(--line-height-body-200);
 }
 
+.clarity-redirect {
+  width: 100%;
+  padding-top: var(--space-24);
+}
+
 @media (min-width: 40rem) {
   .intro__title {
     font-size: var(--font-size-heading-200);
@@ -75,7 +80,7 @@
   }
 }
 
-/* ---- Past work ----------------------------------------------------------- */
+/* ---- Past companies ------------------------------------------------------ */
 
 .section-heading {
   padding: 0 var(--gutter-page) var(--space-64);
